@@ -8,6 +8,8 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Services from './components/Services';
 import Signup from './components/Signup';
+import About from './components/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
