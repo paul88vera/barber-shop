@@ -3,7 +3,7 @@ const { ApolloServer } = require('apollo-server-express');
 
 const { typeDefs, resolvers } = require('./schemas');
 // If we use an auth helper, we can add it here
-// const { authMiddleware } = require('./utils/auth'); 
+const { authMiddleware } = require('./utils/auth'); 
 const db = require('./config/connection');
 
 const PORT = process.env.PORT || 3001;
@@ -13,7 +13,7 @@ const startServer = async () => {
     const server = new ApolloServer({
         typeDefs,
         resolvers,
-        // context: authMiddleware,
+        context: authMiddleware,
     });
     // not 100% sure that we should call the following few lines instead of server.start(); I guess we'll see. (See: https://www.apollographql.com/docs/apollo-server/api/apollo-server/)
     await server.start();
