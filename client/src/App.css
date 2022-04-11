@@ -1,27 +1,83 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-* {
+/* * {
   box-sizing: border-box;
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 16px;
-}
+} */
 
 .header-section {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logo {
-  height: 275px;
+  height: 250px;
   width: auto;
   display: flex;
   flex-direction: column;
 }
 
-.nav ul,
-li {
-  display: inline-block;
-  justify-content: space-between;
+.nav {
   display: flex;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 20px;
+}
+
+.nav ul {
+  list-style-type: none;
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+
+.nav li {
+  display: inline;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+
+.signup-hero {
+  background-image: linear-gradient(
+      rgba(220, 220, 220, 0.3),
+      rgba(220, 220, 220, 0.3)
+    ),
+    url('./assets/images/landing-page.jpg');
+  height: 75%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.hero-text {
+  display: flex;
+  flex-wrap: wrap;
+  color: white;
+  text-align: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.promo {
+  flex-wrap: wrap;
+  display: flex;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.signup-btn {
+  background-color: rgb(73, 153, 140);
+  border-radius: 30px;
+  font-size: 17px;
+  padding: 6px 28px;
+  font-weight: bolder;
+  color: white;
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
 }

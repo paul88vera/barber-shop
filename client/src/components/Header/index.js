@@ -5,11 +5,8 @@ function Header() {
   return (
     <div>
       <section className="header-section">
-        <div className="header">
-          <h1></h1>
-        </div>
         <nav className="nav">
-          <div>
+          <div className="nav-1">
             <ul>
               <Link to="/">
                 <li>Home</li>
@@ -27,7 +24,7 @@ function Header() {
             src={require('../../assets/images/logo.png')}
             alt="crossed straight razors"
           />
-          <div>
+          <div className="nav-2">
             <ul>
               <Link to="/about">
                 <li>About</li>
@@ -38,27 +35,34 @@ function Header() {
               <Link to="/login">
                 <li>Login</li>
               </Link>
-              <Link to="/signup">
+              {/* <Link to="/signup">
                 <li>Signup</li>
-              </Link>
+              </Link> */}
             </ul>
           </div>
         </nav>
       </section>
       <div className="signup-hero">
-        <p>Sign up for 50% OFF your first cut!</p>
-        <p>
-          Cosby sweater iphone artisan, squid trust fund photo booth twee blog
-          shoreditch single-origin coffee aesthetic jean shorts messenger bag
-          brooklyn butcher. Iphone fap banksy next level put a bird on it,
-          letterpress photo booth thundercats biodiesel fanny pack etsy banh mi
-          wayfarers. Sustainable four loko dreamcatcher, vegan single-origin
-          coffee yr cardigan biodiesel williamsburg thundercats salvia master
-          cleanse terry richardson tumblr mcsweeney’s.
-        </p>
-        <button id="signup-btn" className="signup-btn">
-          Sign Up
-        </button>
+        <div className="hero-text">
+          {/* <img
+          className="hero"
+          src={require('../../assets/images/landing-page.jpg')}
+          alt="vintage shaving tools"
+        /> */}
+          <p className="promo">Sign Up for 50% OFF your first cut!</p>
+          <p>
+            Cosby sweater iphone artisan, squid trust fund photo booth twee blog
+            shoreditch single-origin coffee aesthetic jean shorts messenger bag
+            brooklyn butcher. Iphone fap banksy next level put a bird on it,
+            letterpress photo booth thundercats biodiesel fanny pack etsy banh
+            mi wayfarers. Sustainable four loko dreamcatcher, vegan
+            single-origin coffee yr cardigan biodiesel williamsburg thundercats
+            salvia master cleanse terry richardson tumblr mcsweeney’s.
+          </p>
+          <button id="signup-btn" className="signup-btn">
+            Sign Up
+          </button>
+        </div>
       </div>
     </div>
   );
