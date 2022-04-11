@@ -1,25 +1,30 @@
 import React from 'react';
-import Header from './';
+import { Link } from 'react-router-dom';
 
 function Home() {
-  return;
-  <main>
-    <Header />
-    <div>
-      <h1 className="about-h1">WHO WE ARE</h1>
-    </div>
-    <div>
-      <h2>About Barbershop</h2>
-      <p>
-        Monocle ipsum dolor sit amet ad discerning Boeing 787, airport lovely
-        aute quis pariatur artisanal exclusive tote bag nulla. Alluring ex
-        elegant adipisicing duis, nisi the highest quality ut id Ginza Boeing
-        787 commodo. Et charming laborum fugiat punctual Tsutaya. Premium the
-        best Baggu cillum global signature efficient. Irure punctual pariatur ut
-        minim occaecat cupidatat incididunt.
-      </p>
-    </div>
-  </main>;
+  return (
+    <main>
+      <div className="signup-hero">
+        <div className="hero-text">
+          <p className="promo">Sign Up for 50% OFF your first cut!</p>
+          <p>
+            Cosby sweater iphone artisan, squid trust fund photo booth twee blog
+            shoreditch single-origin coffee aesthetic jean shorts messenger bag
+            brooklyn butcher. Iphone fap banksy next level put a bird on it,
+            letterpress photo booth thundercats biodiesel fanny pack etsy banh
+            mi wayfarers. Sustainable four loko dreamcatcher, vegan
+            single-origin coffee yr cardigan biodiesel williamsburg thundercats
+            salvia master cleanse terry richardson tumblr mcsweeney’s.
+          </p>
+          <Link to="/signup">
+            <button id="signup-btn" className="signup-btn">
+              Sign Up
+            </button>
+          </Link>
+        </div>
+      </div>
+    </main>
+  );
 }
 
 export default Home;
