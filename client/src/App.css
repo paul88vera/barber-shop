@@ -25,3 +25,26 @@ li {
   justify-content: space-between;
   display: flex;
 }
+
+.footer{
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+
+.about-h1{
+  text-align: center;
+  font-size: 2.0em;
+  font-weight: bolder;
+}
+
+.social-media{
+  text-align: left;
+  position: relative;
+}
+
+.rights{
+  text-align: right;
+  position: relative;
+}
