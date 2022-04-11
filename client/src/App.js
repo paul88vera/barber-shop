@@ -41,6 +41,7 @@ function App() {
             </Route>
           </Switch>
         </div>
+        <Home />
         <Footer />
       </main>
     </Router>
