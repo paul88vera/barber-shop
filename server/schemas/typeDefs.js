@@ -26,7 +26,7 @@ const typeDefs = gql`
         me: User
         users: [User]
         user(username: String!): User
-        haricuts(username: String!): [Haircut]
+        haircuts(username: String!): [Haircut]
     }
 
     type Auth {
