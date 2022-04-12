@@ -8,7 +8,7 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Services from './Pages/Services';
 import Signup from './components/Signup';
-import About from './components/About';
+import About from './Pages/About';
 import Footer from './components/Footer';
 
 function App() {

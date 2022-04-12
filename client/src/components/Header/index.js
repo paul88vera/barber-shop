@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div>
+    <div className="">
       <section className="header-section">
         <nav className="nav">
           <div className="nav-1">
@@ -19,11 +19,13 @@ function Header() {
               </Link>
             </ul>
           </div>
-          <img
-            className="logo"
-            src={require('../../assets/images/logo.png')}
-            alt="crossed straight razors"
-          />
+          <Link to="/">
+            <img
+              className="logo"
+              src={require('../../assets/images/logo.png')}
+              alt="crossed straight razors"
+            />
+          </Link>
           <div className="nav-2">
             <ul>
               <Link to="/about">

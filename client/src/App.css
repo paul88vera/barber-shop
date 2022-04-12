@@ -57,7 +57,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: absolute;
+  position: relative;
 }
 
 .signup-btn {
@@ -104,14 +104,30 @@
 
 .about {
   display: flex;
+  justify-content: space-evenly;
+}
+
+.about-bckgrd {
+  background-image: url();
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 
 .about-p {
   flex: 1;
+  height: 700px;
+  width: 700px;
 }
 
 .about-img {
-  background-image: url('./assets/images/about.png');
+  height: auto;
+  width: 400px;
+}
+
+.about-img-div {
   margin-right: 20px;
 }
 .about-h1 {

@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../../components/Header';
 
 function Signup() {
   return (
@@ -21,7 +20,7 @@ function Signup() {
           </div>
           <div class="">
             <label className="signup-label" for="password">
-              Create a Password{' '}
+              Create a Password
             </label>
             <input type="password" name="password" id="password" required />
           </div>
