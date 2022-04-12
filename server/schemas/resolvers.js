@@ -64,6 +64,11 @@ const resolvers = {
             }
       
             throw new AuthenticationError('You need to be logged in!');
+          },
+          deleteHaircut: async(parent, args, context) {
+            if (context.user) {
+              const 
+            }
           }
     },
 };
