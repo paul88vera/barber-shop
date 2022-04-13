@@ -8,9 +8,9 @@ const Modal = ({onClose, currentPhoto}) => {
         <div className="modalBackgrop">
             <div className="modalContainer">
                 <h3 className="modalTitle">{name}</h3>
-                <img src={require(`../../assets/images/gallery/${index}.jpg`)} alt="Sample of our shop" />
+                <img src={require(`../../assets/images/gallery/${index}.jpg`)} className="img-fluid" alt="Sample of our shop" />
                 <p> {description} </p>
-                <button onClick={onClose} type="button">
+                <button className="modalButton" onClick={onClose} type="button">
                     Close
                 </button>
             </div>

@@ -1,9 +1,11 @@
 import React from 'react';
+import Calendly from '../components/Calendly';
 
 const Services = () => {
 
     return (
         <div className="">
+            <Calendly />
             <div className="">
                 <h3 className="">
                     <strong>
@@ -21,7 +23,7 @@ const Services = () => {
             </div>
             <h3 className="">
                 <strong>
-                    Head Barber half hour $38
+                    Head Barber Half Hour $38
                 </strong>
             </h3>
             <p className="">
