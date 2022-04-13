@@ -3,7 +3,7 @@ import React from 'react';
 function Login() {
   return (
     <section className="login-page">
-      <h1 className="login-title">Welcome, Please Log in</h1>
+      <h1 className="login-title">Welcome, please log in</h1>
       <div className="login">
         <form className="login-form">
           <div>
