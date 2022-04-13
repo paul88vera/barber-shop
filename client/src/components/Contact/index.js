@@ -17,7 +17,7 @@ function Contact() {
         </div>
         <div className="form-group">
           <label>Message</label>
-          <textarea className="form-control" rows="5"></textarea>
+          <textarea className="form-control" rows="5" />
         </div>
         <button type="submit" className="submit-btn">
           Submit
