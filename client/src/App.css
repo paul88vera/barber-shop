@@ -185,3 +185,28 @@
 .submit-btn-div {
   padding: 30px;
 }
+
+/* Login Page styling */
+.login-page{
+  text-align: center;
+  padding: 100px;
+  height: 100vh;
+  position: relative;
+  color: black;
+}
+
+.login-title{
+  font-size: 75px;
+  font-weight: 700;
+}
+
+.login-form{
+  padding: 50px;
+}
+
+.login-label{
+  padding: 20px 20px;
+  align-items: center;
+  font-size: 20px;
+}
+
