@@ -4,10 +4,16 @@ import { Link } from 'react-router-dom';
 function Home() {
   return (
     <main>
+      {/* <div>
+        <img
+          className="profile-pic img-fluid"
+          src={require('../../assets/images/landing-page.jpg')}
+          alt="Jason"
+        /> */}
       <div className="signup-hero">
         <div className="hero-text">
           <p className="promo">Sign Up for 50% OFF your first cut!</p>
-          <p>
+          <p className="promo-text">
             Cosby sweater iphone artisan, squid trust fund photo booth twee blog
             shoreditch single-origin coffee aesthetic jean shorts messenger bag
             brooklyn butcher. Iphone fap banksy next level put a bird on it,
@@ -23,6 +29,7 @@ function Home() {
           </Link>
         </div>
       </div>
+      {/* </div> */}
     </main>
   );
 }

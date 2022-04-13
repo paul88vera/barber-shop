@@ -9,33 +9,33 @@ function Header() {
           <div className="nav-1">
             <ul>
               <Link to="/">
-                <li>Home</li>
+                <li className="hvr-glow">Home</li>
               </Link>
               <Link to="/gallery">
-                <li>Gallery</li>
+                <li className="hvr-glow">Gallery</li>
               </Link>
               <Link to="/services">
-                <li>Services</li>
+                <li className="hvr-glow">Services</li>
               </Link>
             </ul>
           </div>
           <Link to="/">
             <img
-              className="logo"
-              src={require('../../assets/images/logo.png')}
+              className="logo hvr-glow"
+              src={require('../../assets/images/inverted_logo.png')}
               alt="crossed straight razors"
             />
           </Link>
           <div className="nav-2">
             <ul>
               <Link to="/about">
-                <li>About</li>
+                <li className="hvr-glow">About</li>
               </Link>
               <Link to="/contact">
-                <li>Contact</li>
+                <li className="hvr-glow">Contact</li>
               </Link>
               <Link to="/login">
-                <li>Login</li>
+                <li className="hvr-glow">Login</li>
               </Link>
             </ul>
           </div>
