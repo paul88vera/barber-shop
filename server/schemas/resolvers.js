@@ -65,10 +65,18 @@ const resolvers = {
       
             throw new AuthenticationError('You need to be logged in!');
           },
-          deleteHaircut: async(parent, args, context) {
+          deleteHaircut: async (parent, { text }, context) => {
             if (context.user) {
-              const 
+              const updatedUser = await User.findOneAndUpdate(
+                { username: context.user.username },
+                { $pull: { haircuts: { haircutText: text }}},
+                { new: true }
+              );
+
+              return updatedUser;
             }
+
+            throw new AuthenticationError('You need to be logged in!');
           }
     },
 };

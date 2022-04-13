@@ -32,6 +32,7 @@ const typeDefs = gql`
         login(email: String!, password: String!): Auth
         addUser(username: String!, email: String!, password: String!): Auth
         addHaircut(haircutText: String!, instructions: String): Haircut
+        deleteHaircut(haircutText: String!): User
     }
 `;
 
