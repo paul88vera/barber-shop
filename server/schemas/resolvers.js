@@ -65,19 +65,35 @@ const resolvers = {
       
             throw new AuthenticationError('You need to be logged in!');
           },
-          deleteHaircut: async (parent, { text }, context) => {
+          deleteHaircut: async (parent, { _id }, context) => {
             if (context.user) {
-              const updatedUser = await User.findOneAndUpdate(
-                { username: context.user.username },
-                { $pull: { haircuts: { haircutText: text }}},
-                { new: true }
-              );
+              Haircut.findOneAndDelete( {_id } )
+                .then(deletedHaircut => {
+                  return deletedHaircut;
+                })
+                // .then(delHaircut => {
+                //   if (!delHaircut) {
+                //     console.log('Errrrorrrr!');
+                //   }
+                // })
 
-              return updatedUser;
             }
-
-            throw new AuthenticationError('You need to be logged in!');
           }
+
+
+          // deleteHaircut: async (parent, { text }, context) => {
+          //   if (context.user) {
+          //     const updatedUser = await User.findOneAndUpdate(
+          //       { username: context.user.username },
+          //       { $pull: { haircuts: { haircutText: text }}},
+          //       { new: true }
+          //     );
+
+          //     return updatedUser;
+          //   }
+
+          //   throw new AuthenticationError('You need to be logged in!');
+          // }
     },
 };
 
