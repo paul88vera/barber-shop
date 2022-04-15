@@ -10,7 +10,7 @@ const Modal = ({onClose, currentPhoto}) => {
                 <h3 className="modalTitle">{name}</h3>
                 <img src={require(`../../assets/images/gallery/${index}.jpg`)} className="img-fluid" alt="Sample of our shop" />
                 <p> {description} </p>
-                <button className="modalButton" onClick={onClose} type="button">
+                <button className="btn-close" aria-label="Close" onClick={onClose} type="button">
                     Close
                 </button>
             </div>
