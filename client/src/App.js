@@ -10,6 +10,7 @@ import Services from './Pages/Services';
 import Signup from './components/Signup';
 import About from './Pages/About';
 import Footer from './components/Footer';
+import Profile from './Pages/Profile';
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
             </Route>
             <Route exact path="/signup">
               <Signup />
+            </Route>
+            <Route exact path="/profile">
+              <Profile />
             </Route>
           </Switch>
         </div>

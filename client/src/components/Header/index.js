@@ -3,45 +3,58 @@ import { Link } from 'react-router-dom';
 
 function Header() {
   return (
-    <div className="">
-      <section className="header-section">
-        <nav className="nav">
-          <div className="nav-1">
-            <ul>
-              <Link to="/">
-                <li className="hvr-glow">Home</li>
+    <section className="header-section">
+      <nav className="navbar navbar-expand-md">
+        <div className="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarCollapse"
+            // aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul className="nav navbar-nav mr-auto">
+              <Link to="/" className="">
+                <li className="hvr-glow nav-item">Home</li>
               </Link>
-              <Link to="/gallery">
-                <li className="hvr-glow">Gallery</li>
+              <Link to="/gallery" className="">
+                <li className="hvr-glow nav-item">Gallery</li>
               </Link>
               <Link to="/services">
-                <li className="hvr-glow">Services</li>
+                <li className="hvr-glow nav-item">Services</li>
               </Link>
             </ul>
-          </div>
-          <Link to="/">
-            <img
-              className="logo hvr-glow"
-              src={require('../../assets/images/inverted_logo.png')}
-              alt="crossed straight razors"
-            />
-          </Link>
-          <div className="nav-2">
-            <ul>
+            {/* </div> */}
+            {/* <div className="logo-div hvr-glow "> */}
+            <Link to="/">
+              <img
+                className="logo hvr-glow img-fluid"
+                src={require('../../assets/images/inverted_logo.png')}
+                alt="crossed straight razors"
+              />
+            </Link>
+            {/* </div> */}
+            {/* <div className="nav-2"> */}
+            <ul className="nav navbar-nav ml-auto">
               <Link to="/about">
                 <li className="hvr-glow">About</li>
               </Link>
               <Link to="/contact">
-                <li className="hvr-glow">Contact</li>
+                <li className="hvr-glow nav-item">Contact</li>
               </Link>
               <Link to="/login">
-                <li className="hvr-glow">Login</li>
+                <li className="hvr-glow nav-item">Login</li>
               </Link>
             </ul>
           </div>
-        </nav>
-      </section>
-    </div>
+        </div>
+      </nav>
+    </section>
   );
 }
 
