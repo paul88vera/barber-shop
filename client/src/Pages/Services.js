@@ -4,7 +4,7 @@ const Services = () => {
 
     return (
         <div className="mx-auto w-75 bg-secondary rounded-3 d-flex justify-content-center m-5">
-            <div className="bg-white w-50 text-center m-5 p-5">
+            <div className="bg-white w-50 text-center m-5 p-5 rounded-3">
                 <h2 className="fw-bold border-bottom">
                     <strong>
                         Pricing varies between barbers based on experience, these are our starting prices. Please ask your barber for details.
@@ -16,9 +16,12 @@ const Services = () => {
                     </strong>
                 </h2>
                 <p className="">
-                    Multiple service appointment, these services include a haircut, shave, beard detail, and head shave. Long hair cuts (shoulders or longer) must book the one hour. Head Barbers have experience in multiple aspects of Barbering, including facial hair, straight razor shaves, hair textures, classic styles and techniques. Appointments with a Head Barber are made in hour blocks and have a set price, one client per appointment, multiple services are allowed.
+                    Multiple service appointment, these services include a haircut, shave, beard detail, and head shave. Long hair cuts (shoulders or longer) must book the one hour. 
+                    <br />
+                    <br />
+                    Head Barbers have experience in multiple aspects of Barbering, including facial hair, straight razor shaves, hair textures, classic styles and techniques. Appointments with a Head Barber are made in hour blocks and have a set price, one client per appointment, multiple services are allowed.
                 </p>
-                <h2 className="fw-bold fst-italic border-bottom">
+                <h2 className="fw-bold fst-italic ">
                     <strong>
                         Head Barber Half Hour $38
                     </strong>
@@ -70,17 +73,17 @@ const Services = () => {
                 <p className="">
                     One length clipper guard all over, includes straight razor finish.
                 </p>
-                <h2 className="fw-bold fst-italic border-bottom">
+                <h2 className="fw-bold fst-italic">
                     <strong>
                         Kids $30 (Ages 3-12)
                     </strong>
                 </h2>
-                <h2 className="fw-bold fst-italic border-bottom">
+                <h2 className="fw-bold fst-italic">
                     <strong>
                         Apprentice Services $25
                     </strong>
                 </h2>
-                <h2 className="fw-bold fst-italic border-bottom">
+                <h2 className="fw-bold fst-italic">
                     <strong>
                         APPOINTMENTS ONLY
                     </strong>
