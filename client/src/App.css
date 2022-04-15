@@ -15,6 +15,8 @@
   justify-content: center;
   padding: -20px;
   height: 160px;
+  background-color: rgb(26, 26, 26);
+  z-index: -1;
 }
 
 .logo {
@@ -22,6 +24,10 @@
   width: auto;
   display: flex;
   flex-direction: column;
+}
+
+.logo-div {
+  display: flex;
 }
 
 .nav {
@@ -41,9 +47,26 @@
 .nav li {
   display: inline;
   justify-content: space-between;
-  padding: 0 50px;
-  color: black;
-  text-decoration: none;
+  padding: 0.5em 2em;
+  color: white;
+  text-decoration: border rgb(255, 255, 255);
+}
+
+.hvr-glow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow;
+  transition-property: box-shadow;
+}
+.hvr-glow:hover,
+.hvr-glow:focus,
+.hvr-glow:active {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.698);
 }
 
 /* Hero/Landing page styling */
@@ -58,6 +81,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  /* z-index: 1; */
 }
 
 .signup-btn {
@@ -82,55 +106,10 @@
   font-weight: bolder;
 }
 
-/* Gallery/modal CSS */
-
-.modalBackdrop {
-	background: rgba(0, 0, 0, .65);
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
+.promo-text {
+  color: black;
+  font-weight: bolder;
 }
-
-.modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
-	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
-}
-
-.modalTitle {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 25px;
-}
-
-.img-thumbnail {
-  width: auto;
-  height: 300px;
-  margin-bottom: 50px;
-  cursor: pointer;
-}
-
-.modalButton {
-	background: var(--primary);
-	border: 0;
-	border-radius: 5px;
-	color: gold;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 600;
-	margin-bottom: 30px;
-	padding: 10px 15px;	
-}
-
-/* end gallery and modal css*/
-
 
 /* Footer styling */
 .footer {
@@ -237,33 +216,33 @@
 }
 
 /* Login Page styling */
-.login-page{
+.login-page {
   text-align: center;
   padding: 100px;
   height: 100vh;
   position: relative;
   color: black;
   background-image: linear-gradient(
-    rgba(220, 220, 220, 0.3),
-    rgba(220, 220, 220, 0.3)
-  ),
-  url('./assets/images/chris-knight-_H1XXY96pqw-unsplash.jpg');
+      rgba(220, 220, 220, 0.3),
+      rgba(220, 220, 220, 0.3)
+    ),
+    url('./assets/images/chris-knight-_H1XXY96pqw-unsplash.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
 }
 
-.login-title{
+.login-title {
   font-size: 75px;
   font-weight: 700;
 }
 
-.login-form{
+.login-form {
   padding: 50px;
 }
 
-.login-label{
+.login-label {
   padding: 20px 20px;
   align-items: center;
   font-size: 20px;
@@ -271,10 +250,50 @@
 }
 
 /* Contact Styling */
-.contact-header{
-  
-}
-
-.contact-form{
+.contact-form {
   padding: 50px;
 }
+
+/* profile page styling */
+.profile-page {
+  background-color: rgb(130, 130, 130);
+  height: 100%;
+  width: 80%;
+  display: flex;
+}
+
+.sidebar {
+  height: 100vh;
+  width: 20%;
+  position: relative;
+  left: 0;
+  top: 0;
+  padding-top: 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.sidebar div {
+  padding: 8px;
+  font-size: 24px;
+  display: block;
+}
+
+.profile-pic {
+  justify-content: center;
+}
+
+.profile-body {
+  display: flex;
+  justify-content: center;
+}
+
+/* @media only screen and (max-width: 1400px) {
+  .nav {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+} */
