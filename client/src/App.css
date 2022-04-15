@@ -204,11 +204,10 @@
 }
 
 .submit-btn {
-  background-color: rgb(73, 153, 140);
   font-size: 18px;
-  padding: 6px 28px;
+  padding: 6px;
+  margin: 10px;
   font-weight: bolder;
-  color: white;
   border: none;
 }
 
