@@ -50,6 +50,9 @@ function Header() {
               <Link to="/login">
                 <li className="hvr-glow nav-item">Login</li>
               </Link>
+              <Link to="/profile">
+                <li className="hvr-glow nav-item">Profile</li>
+              </Link>
             </ul>
           </div>
         </div>
