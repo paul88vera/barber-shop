@@ -1,4 +1,5 @@
 import React from 'react';
+import Calendly from '../components/Calendly';
 
 function Profile() {
   return (
@@ -42,6 +43,7 @@ function Profile() {
           </div>
         </div>
       </div>
+      <Calendly />
     </div>
   );
 }
