@@ -5,22 +5,26 @@ function Login() {
     <section className="login-page">
       <h1 className="login-title">Welcome, please log in</h1>
       <div className="login">
-        <form className="login-form">
+        <form action="" method="get" className="login-form">
           <div>
-            <label className="login-label">Username</label>
-            <input type="email" id="email" required placeholder="Enter your email" />
+            <label className="login-label" for="name">
+              Username:
+            </label>
+            <input type="text" name="name" id="name" required />
           </div>
-          <div>
-            <label className="login-label">Password</label>
-            <input type="password" id="password" required placeholder="Enter your password" />
+          <div class="">
+            <label className="login-label" for="password">
+              Password:
+            </label>
+            <input type="password" name="password" id="password" required />
           </div>
-          <div className="submit-btn-div">
-            <input className="submit-btn" type="submit" value="Submit!" />
+          <div className="login-btn-div">
+            <input className="login-btn" type="submit" value="Login!" />
           </div>
         </form>
       </div>
     </section>
-  )
+  );
 }
 
 export default Login;
