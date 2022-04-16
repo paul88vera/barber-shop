@@ -1,4 +1,5 @@
 import React from 'react';
+import Calendly from '../components/Calendly';
 import Card from 'react-bootstrap/Card';
 import Default from '../assets/images/profile-default.png';
 import Button from 'react-bootstrap/Button';
@@ -67,6 +68,7 @@ function Profile() {
           </div>
         </div>
       </div>
+      <Calendly />
     </div>
   );
 }
