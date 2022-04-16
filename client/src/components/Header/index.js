@@ -5,7 +5,7 @@ function Header() {
   return (
     <section className="header-section">
       <nav className="navbar navbar-expand-md">
-        <div className="container">
+        {/* <div className="container"> */}
           <button
             class="navbar-toggler"
             type="button"
@@ -55,7 +55,7 @@ function Header() {
               </Link>
             </ul>
           </div>
-        </div>
+        {/* </div> */}
       </nav>
     </section>
   );
