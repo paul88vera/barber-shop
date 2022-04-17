@@ -1,8 +1,5 @@
 import React from 'react';
 import Calendly from '../components/Calendly';
-import Card from 'react-bootstrap/Card';
-import Default from '../assets/images/profile-default.png';
-import Button from 'react-bootstrap/Button';
 
 function Profile() {
   return (
@@ -11,8 +8,8 @@ function Profile() {
         <div className="sidebar">
           <div class="profile-pic">
             <img
-              className=""
-              src={require('../assets/images/profile-default.png')}
+              className="img-fluid"
+              src={require('../assets/images/profile-user.png')}
               alt="Jason"
             />
           </div>
@@ -21,28 +18,6 @@ function Profile() {
         </div>
       </div>
       <div className="profile-body">
-        {/* <Card classname="card-row" style={{ width: '18rem' }}>
-          <Card.Body>
-            <Card.Title>Buzz Cut</Card.Title>
-            <Card.Text>Details/instructions</Card.Text>
-            <Button variant="primary">Edit</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '18rem' }}>
-          <Card.Body>
-            <Card.Title>Pomp</Card.Title>
-            <Card.Text>Details/instructions</Card.Text>
-            <Button variant="primary">Edit</Button>
-          </Card.Body>
-        </Card>
-        <Card style={{ width: '18rem' }}>
-          <Card.Body>
-            <Card.Title>Biebs</Card.Title>
-            <Card.Text>Details/instructions</Card.Text>
-            <Button variant="primary">Edit</Button>
-          </Card.Body>
-        </Card> */}
-
         <div class="card">
           <div class="container">
             <h4>

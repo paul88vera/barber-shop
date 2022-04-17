@@ -87,29 +87,29 @@
 
 /* Gallery/modal CSS */
 .modalBackdrop {
-	background: rgba(0, 0, 0, .65);
-	bottom: 0;
-	left: 0;
-	overflow: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	z-index: 1;
+  background: rgba(0, 0, 0, 0.65);
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1;
 }
 
 .modalContainer {
-	background: var(--darker);
-	border-radius: 5px;
-	max-width: 100%;
-	margin: 50px auto;
-	padding: 15px;
-	width: 960px;
+  background: var(--darker);
+  border-radius: 5px;
+  max-width: 100%;
+  margin: 50px auto;
+  padding: 15px;
+  width: 960px;
 }
 
 .modalTitle {
-	font-size: 18px;
-	font-weight: 600;
-	margin-bottom: 25px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 25px;
 }
 
 .img-thumbnail {
@@ -120,15 +120,15 @@
 }
 
 .modalButton {
-	background: var(--primary);
-	border: 0;
-	border-radius: 5px;
-	color: gold;
-	cursor: pointer;
-	font-size: 16px;
-	font-weight: 600;
-	margin-bottom: 30px;
-	padding: 10px 15px;	
+  background: var(--primary);
+  border: 0;
+  border-radius: 5px;
+  color: gold;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  padding: 10px 15px;
 }
 
 .signup-btn {
@@ -184,7 +184,6 @@
 .about {
   display: flex;
   justify-content: space-evenly;
-  border: solid red;
 }
 
 .about-bckgrd {
@@ -203,7 +202,6 @@
   height: 700px;
   width: 700px;
   color: white;
-  border: solid green;
   text-align: center;
 }
 
@@ -214,8 +212,7 @@
 }
 
 .about-img-div {
-  border: solid black;
-  margin-right: 20px;
+  /* margin-right: 20px; */
 }
 .about-h1 {
   text-align: center;
@@ -258,6 +255,7 @@
 }
 
 .submit-btn {
+  background-color: rgb(73, 153, 140);
   font-size: 18px;
   padding: 6px;
   margin: 10px;
@@ -303,9 +301,37 @@
   font-weight: 700;
 }
 
+.login-form input {
+  border-radius: 7px;
+  border: none;
+}
+
+.login-btn {
+  background-color: rgb(73, 153, 140);
+  font-size: 18px;
+  padding: 6px;
+  margin: 10px;
+  font-weight: bolder;
+  border: none;
+}
+
+.login-btn-div {
+  padding: 30px;
+}
+
 /* Contact Styling */
 .contact-form {
   padding: 50px;
+}
+
+.contact-submit-btn {
+  background-color: #6c757d;
+  font-size: 18px;
+  padding: 2px 5px;
+  margin: 10px;
+  font-weight: bolder;
+  border: solid 2px;
+  border-radius: 15px;
 }
 
 /* profile page styling */
@@ -338,8 +364,8 @@
 }
 
 .profile-pic img {
-  border-radius: 200px;
-  border: solid black;
+  /* border-radius: 200px; */
+  /* border: solid black; */
 }
 
 .profile-body {
