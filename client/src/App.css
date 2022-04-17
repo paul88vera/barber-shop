@@ -320,6 +320,18 @@
 }
 
 /* Contact Styling */
+.contact{
+  background-image: linear-gradient(
+    rgba(220, 220, 220, 0.3),
+    rgba(220, 220, 220, 0.3)
+  ),
+    url('./assets/images/reis-26-1_DAlXy0wng-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .contact-form {
   padding: 50px;
 }
