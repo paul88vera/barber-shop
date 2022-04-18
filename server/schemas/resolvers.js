@@ -28,14 +28,15 @@ const resolvers = {
     },
     
     Mutation: {
+      // args needed to create a user --> username and email
         addUser: async (parent, args) => {
             const user = await User.create(args);
             const token = signToken(user);
       
             return { token, user };
           },
-        login: async (parent, { email, password }) => {
-            const user = await User.findOne({ email });
+        login: async (parent, { username, password }) => {
+            const user = await User.findOne({ username });
       
             if (!user) {
               throw new AuthenticationError('Incorrect credentials');
@@ -50,6 +51,7 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
           },
+          // Args needed to create a haircuut --> haircutText (necessary), instructions (not necessary), and user needs to be logged in
           addHaircut: async (parent, args, context) => {
             if (context.user) {
               const haircut = await Haircut.create({ ...args, username: context.user.username });
@@ -63,6 +65,28 @@ const resolvers = {
               return haircut;
             }
       
+            throw new AuthenticationError('You need to be logged in!');
+          },
+          // Use the haircut's unique _id to find and delete it
+          deleteHaircut: async (parent, { _id }, context) => {
+            if (context.user) {
+              Haircut.findOneAndDelete( {_id } )
+                .then(deletedHaircut => {
+                  return deletedHaircut;
+                })
+            }
+            throw new AuthenticationError('You need to be logged in!');
+          }
+          ,
+          deleteInstructions: async (parent, { _id }, context) => {
+            if (context.user) {
+              const haircut = await Haircut.findOneAndUpdate(
+                { _id },
+                { instructions: ""},
+                { new: true}
+              );
+              return haircut;
+            }
             throw new AuthenticationError('You need to be logged in!');
           }
     },
