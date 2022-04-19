@@ -165,7 +165,7 @@
   width: 100%;
   height: 60px;
   padding: 3px;
-  background-color: rgb(96, 98, 99);
+  background-color: rgb(26, 26, 26);
   color: white;
 }
 
@@ -320,11 +320,11 @@
 }
 
 /* Contact Styling */
-.contact{
+.contact {
   background-image: linear-gradient(
-    rgba(220, 220, 220, 0.3),
-    rgba(220, 220, 220, 0.3)
-  ),
+      rgba(220, 220, 220, 0.3),
+      rgba(220, 220, 220, 0.3)
+    ),
     url('./assets/images/reis-26-1_DAlXy0wng-unsplash.jpg');
   background-position: center;
   background-repeat: no-repeat;
