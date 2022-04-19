@@ -332,18 +332,49 @@
   position: relative;
 }
 
-.contact-form {
-  padding: 50px;
+.container-form{
+  padding: 20px 0px;
+}
+
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  padding: 20px 0px 20px;
+}
+
+.contact-form{
+  text-align: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-submit-btn {
-  background-color: #6c757d;
+  background-color: rgb(73, 153, 140);
   font-size: 18px;
-  padding: 2px 5px;
-  margin: 10px;
+  padding: 5px;
+  margin: 10px 480px;
   font-weight: bolder;
-  border: solid 2px;
-  border-radius: 15px;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+}
+
+.form-label{
+  padding: 8px;
+}
+
+.form-control{
+  width: 25%;
+  display: inline-block;
+}
+
+.textarea{
+  width: 30%;
+  display: inline-block;
+  margin: 5px 0 0 25px;
 }
 
 /* profile page styling */
