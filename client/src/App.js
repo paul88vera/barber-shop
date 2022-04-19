@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route  } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
@@ -46,7 +46,6 @@ function App() {
         <main className="main-page">
           <Header />
           <div>
-            <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
@@ -71,7 +70,6 @@ function App() {
               <Route exact path="/profile">
                 <Profile />
               </Route>
-            </Switch>
           </div>
           <Footer />
         </main>
