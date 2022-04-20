@@ -1,6 +1,6 @@
 import React from 'react';
 
-const mapWidget = () => {
+const MapWidget = () => {
 
     return (
         <div>
@@ -10,4 +10,4 @@ const mapWidget = () => {
 
 }
 
-export default mapWidget;
+export default MapWidget;

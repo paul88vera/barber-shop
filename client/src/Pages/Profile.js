@@ -4,8 +4,9 @@ import { useQuery } from '@apollo/client';
 import { QUERY_ME, QUERY_USERS } from '../utils/queries';
 import Auth from '../utils/auth';
 
-function Profile() {
+const Profile = () => {
   const { loading, error, data } = useQuery(QUERY_USERS);
+  const loggedIn = Auth.loggedIn();
 
   if (loading) {
     return ( <div>Loading...</div>)
@@ -22,12 +23,14 @@ function Profile() {
       <div className="profile-wrapper">
         <div className="profile-page">
           <div className="sidebar">
-            <div class="profile-pic">
+            <div className="profile-pic">
+              {loggedIn && (
               <img
                 className="img-fluid"
                 src={require('../assets/images/profile-user.png')}
                 alt="Jason"
               />
+              )}
             </div>
             <div>{users[2].username}</div>
             <div>{users[2].email}</div>

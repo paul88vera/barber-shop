@@ -7,7 +7,7 @@ function Header() {
       <nav className="navbar navbar-expand-md">
         {/* <div className="container"> */}
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarCollapse"
@@ -15,9 +15,9 @@ function Header() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="nav navbar-nav mr-auto">
               <Link to="/" className="">
                 <li className="hvr-glow nav-item">Home</li>

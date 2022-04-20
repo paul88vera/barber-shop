@@ -12,13 +12,13 @@ const Signup = () => {
             </label>
             <input type="text" name="name" id="name" required />
           </div>
-          <div class="">
+          <div className="">
             <label className="signup-label" for="email">
               Enter your email:
             </label>
             <input type="email" name="email" id="email" required />
           </div>
-          <div class="">
+          <div className="">
             <label className="signup-label" for="password">
               Create a Password
             </label>
