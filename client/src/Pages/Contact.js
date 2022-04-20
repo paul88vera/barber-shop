@@ -1,7 +1,7 @@
 import React from 'react';
 import Calendly from '../components/Calendly';
 
-function Contact() {
+const Contact = () => {
 	return (
 		<section className="contact">
 			<div className="container-form">
