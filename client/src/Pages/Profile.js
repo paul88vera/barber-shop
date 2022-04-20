@@ -1,7 +1,9 @@
 import React from 'react';
 import Calendly from '../components/Calendly';
 
-function Profile() {
+import { Link } from 'react-router-dom';
+
+const Profile = () => {
   return (
     <div className="profile-wrapper">
       <div className="profile-page">
@@ -18,6 +20,8 @@ function Profile() {
         </div>
       </div>
       <div className="profile-body">
+
+
         <div class="card">
           <div class="container">
             <h4>
@@ -26,22 +30,8 @@ function Profile() {
             <p>Architect & Engineer</p>
           </div>
         </div>
-        <div class="card">
-          <div class="container">
-            <h4>
-              <b>John Doe</b>
-            </h4>
-            <p>Architect & Engineer</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="container">
-            <h4>
-              <b>John Doe</b>
-            </h4>
-            <p>Architect & Engineer</p>
-          </div>
-        </div>
+
+        
       </div>
       <Calendly />
     </div>

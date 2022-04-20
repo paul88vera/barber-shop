@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Signup() {
+const Signup = () => {
   return (
     <section className="signup-section">
       <h1 className="signup-heading">Sign Up!</h1>

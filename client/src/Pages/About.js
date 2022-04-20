@@ -1,6 +1,6 @@
 // import React from 'react';
 
-function About() {
+const About = () => {
   return (
     <section className="about-bckgrd">
       <div className="about container mt-5">
