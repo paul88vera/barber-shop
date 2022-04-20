@@ -1,7 +1,9 @@
 import React from 'react';
 import Calendly from '../components/Calendly';
 
-function Profile() {
+import { Link } from 'react-router-dom';
+
+const Profile = () => {
   return (
     <div className="profile-wrapper">
       <div className="profile-page">
