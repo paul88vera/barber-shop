@@ -34,7 +34,7 @@ function Header() {
             <Link to="/">
               <img
                 className="logo hvr-glow img-fluid"
-                src={require('../../assets/images/inverted_logo.png')}
+                src={require('../../assets/images/inverted_logo.png').default}
                 alt="crossed straight razors"
               />
             </Link>

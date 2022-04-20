@@ -34,7 +34,7 @@ const About = () => {
         <div className="about-img-div col-xs-6">
           <img
             className="about-img img-fluid"
-            src={require('../assets/images/about.png')}
+            src={require('../assets/images/about.png').default}
             alt="barbers"
           />
         </div>

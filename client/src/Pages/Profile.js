@@ -27,7 +27,7 @@ const Profile = () => {
               {loggedIn && (
               <img
                 className="img-fluid"
-                src={require('../assets/images/profile-user.png')}
+                src={require('../assets/images/profile-user.png').default}
                 alt="Jason"
               />
               )}
