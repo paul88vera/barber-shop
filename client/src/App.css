@@ -332,18 +332,18 @@
   position: relative;
 }
 
-.container-form{
+.container-form {
   padding: 20px 0px;
 }
 
-.card-title{
+.card-title {
   text-align: center;
   font-weight: bold;
   font-size: 50px;
   padding: 20px 0px 20px;
 }
 
-.contact-form{
+.contact-form {
   text-align: center;
   align-content: center;
   display: flex;
@@ -362,19 +362,19 @@
   width: 100px;
 }
 
-.form-label{
+.form-label {
   padding: 8px;
 }
 
-.form-control{
+.form-control {
   width: 25%;
   display: inline-block;
 }
 
-.textarea{
+.textarea {
   width: 30%;
   display: inline-block;
-  margin: 5px 0 0 25px;
+  /* margin: 5px 0 0 25px; */
 }
 
 /* profile page styling */
