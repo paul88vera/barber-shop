@@ -4,8 +4,8 @@ import { useMutation } from '@apollo/client';
 import { } from '../utils/mutations';
 
 const haircutForm = (userId) => {
-    const [haircutName, setName] = useState('');
-    const [haircutBody, setBody] = useState('');
+    const [haircutText, setName] = useState('');
+    const [instructions, setBody] = useState('');
     const [addHaircut, { error }] = useMutation(ADD_HAIRCUT);
 
 
@@ -13,7 +13,7 @@ const haircutForm = (userId) => {
         event.preventDefault();
         try {
             await addHaircut({
-                variables: { haircutName, haircutBody},
+                variables: { haircutText, instructions},
             });
 
             setName('');
@@ -27,11 +27,11 @@ const haircutForm = (userId) => {
         <div class="card">
             <div class="container">
                 <form onSubmit={handleFormSubmit}>
-                    <textarea placeholder="Enter your name"
-                    value={haircutName}
+                    <textarea placeholder="Name your haircut"
+                    value={haircutText}
                     ></textarea>
                     <textarea placeholder="Enter your haircut instructions"
-                    value={haircutBody}
+                    value={instructions}
                     ></textarea>
                     <button className="" type="submit">
                         Submit
