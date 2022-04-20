@@ -46,8 +46,8 @@ export const ADD_HAIRCUT = gql`
     }
 `
 
-// export const DELETE_HAIRCUT = gql`
+export const DELETE_HAIRCUT = gql`
 
-// `
+`
 
 // export const delete instructions
