@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import {
   ApolloClient,
   InMemoryCache,
@@ -24,7 +24,7 @@ const httpLink = createHttpLink({
   uri: "/graphql",
 });
 
-const authLink = setContext((_, { headers }) => {
+const authLink = setContext((_id, { headers }) => {
   const token = localStorage.getItem("id_token");
   return {
     headers: {
@@ -35,43 +35,30 @@ const authLink = setContext((_, { headers }) => {
 });
 
 const client = new ApolloClient({
+  // link: httpLink,
   link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
-function App() {
+
+
+const App = () => {
   return (
     <ApolloProvider client={client}>
       <Router>
         <main className="main-page">
           <Header />
           <div>
-            <Routes>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route exact path="/gallery">
-                <Gallery />
-              </Route>
-              <Route exact path="/services">
-                <Services />
-              </Route>
-              <Route exact path="/about">
-                <About />
-              </Route>
-              <Route exact path="/contact">
-                <Contact />
-              </Route>
-              <Route exact path="/login">
-                <Login />
-              </Route>
-              <Route exact path="/signup">
-                <Signup />
-              </Route>
-              <Route exact path="/profile">
-                <Profile />
-              </Route>
-            </Routes>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/gallery" component={Gallery} />
+              <Route exact path="/services" component={Services} />
+              <Route exact path="/about" component={About} />
+              <Route exact path="/contact" component={Contact} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/profile" component={Profile} />
+            </Switch>
           </div>
           <Footer />
         </main>

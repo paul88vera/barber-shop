@@ -288,6 +288,7 @@
 .login-title {
   font-size: 75px;
   font-weight: 700;
+  color: white;
 }
 
 .login-form {
@@ -297,8 +298,9 @@
 .login-label {
   padding: 20px 20px;
   align-items: center;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
 }
 
 .login-form input {
@@ -313,6 +315,7 @@
   margin: 10px;
   font-weight: bolder;
   border: none;
+  color: white;
 }
 
 .login-btn-div {
@@ -332,19 +335,55 @@
   position: relative;
 }
 
-.contact-form {
-  padding: 50px;
+.container-form{
+  padding: 20px 0px;
+}
+
+.card-title{
+  text-align: center;
+  font-weight: bold;
+  font-size: 50px;
+  padding: 20px 0px 20px;
+  color: white;
+}
+
+.contact-form{
+  text-align: center;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contact-submit-btn {
-  background-color: #6c757d;
+  background-color: rgb(73, 153, 140);
   font-size: 18px;
-  padding: 2px 5px;
-  margin: 10px;
+  padding: 5px;
+  margin: auto;
   font-weight: bolder;
-  border: solid 2px;
-  border-radius: 15px;
+  border: none;
+  border-radius: 50px;
+  width: 100px;
+  color: white;
 }
+
+.form-label{
+  padding: 8px;
+  font-weight: bolder;
+  font-size: 20px;
+  color: white;
+}
+
+.form-control{
+  width: 25%;
+  display: inline-block;
+}
+
+.textarea{
+  width: 30%;
+  display: inline-block;
+  margin: 5px 0 0 30px;
+}›
 
 /* profile page styling */
 .profile-page {
