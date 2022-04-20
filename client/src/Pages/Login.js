@@ -19,7 +19,7 @@ function Login() {
             <input type="password" name="password" id="password" required />
           </div>
           <div className="login-btn-div">
-            <input className="login-btn" type="submit" value="Login!" />
+            <input className="login-btn" type="submit" value="Login" />
           </div>
         </form>
       </div>
