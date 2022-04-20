@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 
 function About() {
   return (
@@ -8,17 +8,27 @@ function About() {
           <div className="col-xs-6">
             <h1 className="about-h1">About Us</h1>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              bibendum turpis sed ex condimentum molestie. Mauris condimentum
-              lectus ut ornare dignissim. Mauris faucibus urna mi, ac feugiat
-              metus aliquam maximus. Proin aliquam justo nec diam vulputate
-              vestibulum. Aenean sollicitudin nulla at nisi ornare, nec suscipit
-              massa eleifend. Morbi tristique justo vel turpis sollicitudin, et
-              tristique velit convallis. In hac habitasse platea dictumst.
-              Phasellus mattis nunc sed orci consequat laoreet. Praesent id nisl
-              nibh. Curabitur imperdiet ultricies mollis. In hac habitasse
-              platea dictumst.
+              I'm baby church-key slow-carb cloud bread kogi, food truck four
+              dollar toast fanny pack DIY intelligentsia flexitarian glossier
+              blue bottle. Seitan chartreuse PBR&B af pork belly offal
+              church-key hexagon. Chia meh chicharrones glossier blog, health
+              goth schlitz thundercats. Pok pok kale chips raclette pinterest
+              actually meggings art party celiac everyday carry kinfolk gentrify
+              letterpress crucifix. Mlkshk master cleanse blue bottle, etsy
+              cronut disrupt humblebrag.
             </p>
+            <p>
+              Bitters chillwave unicorn cred tilde crucifix offal ethical.
+              Authentic butcher listicle pok pok before they sold out actually
+              shoreditch man braid gentrify. Roof party tilde vape af, gentrify
+              readymade drinking vinegar selfies irony ennui pour-over direct
+              trade. Wolf marfa lumbersexual synth direct trade ramps. Pok pok
+              trust fund try-hard organic mlkshk banjo single-origin coffee.
+              Hell of gastropub activated charcoal sartorial everyday carry art
+              party fixie craft beer occupy vexillologist waistcoat ethical
+              poutine.
+            </p>
+            <p>Dummy text? More like dummy thicc text, amirite?</p>
           </div>
         </div>
         <div className="about-img-div col-xs-6">
