@@ -12,7 +12,7 @@ const Login = () => {
             </label>
             <input type="text" name="name" id="name" required />
           </div>
-          <div class="">
+          <div className="">
             <label className="login-label" for="password">
               Password:
             </label>

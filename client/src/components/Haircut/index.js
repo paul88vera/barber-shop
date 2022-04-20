@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMutation } from '@apollo/client';
+import { ADD_HAIRCUT } from '../../utils/mutations';
 import { } from '../utils/mutations';
 
-const haircutForm = (userId) => {
+const HaircutForm = (userId) => {
     const [haircutText, setName] = useState('');
     const [instructions, setBody] = useState('');
     const [addHaircut, { error }] = useMutation(ADD_HAIRCUT);
@@ -24,8 +25,8 @@ const haircutForm = (userId) => {
     };
 
     return (
-        <div class="card">
-            <div class="container">
+        <div className="card">
+            <div className="container">
                 <form onSubmit={handleFormSubmit}>
                     <textarea placeholder="Name your haircut"
                     value={haircutText}
@@ -45,4 +46,4 @@ const haircutForm = (userId) => {
 
 }
 
-export default haircutForm;
+export default HaircutForm;
