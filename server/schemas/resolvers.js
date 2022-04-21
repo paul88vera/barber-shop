@@ -68,9 +68,9 @@ const resolvers = {
             throw new AuthenticationError('You need to be logged in!');
           },
           // Use the haircut's unique _id to find and delete it
-          deleteHaircut: async (parent, { _id }, context) => {
+          deleteHaircut: async (parent, args, context) => {
             if (context.user) {
-              Haircut.findOneAndDelete( {_id } )
+              Haircut.findOneAndDelete( args._id )
                 .then(deletedHaircut => {
                   return deletedHaircut;
                 })

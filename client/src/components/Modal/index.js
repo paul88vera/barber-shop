@@ -8,7 +8,7 @@ const Modal = ({onClose, currentPhoto}) => {
         <div className="modalBackgrop bg-black bg-opacity-25">
             <div className="modalContainer">
                 <h3 className="modalTitle">{name}</h3>
-                <img src={require(`../../assets/images/gallery/${index}.jpg`)} className="img-fluid" alt="Sample of our shop" />
+                <img src={require(`../../assets/images/gallery/${index}.jpg`).default} className="img-fluid" alt="Sample of our shop" />
                 <p className="text"> {description} </p>
                 <button className="btn-close" aria-label="Close" onClick={onClose} type="button">
                 </button>

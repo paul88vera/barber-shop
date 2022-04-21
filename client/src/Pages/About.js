@@ -1,6 +1,6 @@
 import React from 'react';
 
-function About() {
+const About = () => {
   return (
     <section className="about-bckgrd">
       <div className="about container mt-5">
@@ -34,7 +34,7 @@ function About() {
         <div className="about-img-div col-xs-6">
           <img
             className="about-img img-fluid"
-            src={require('../assets/images/about.png')}
+            src={require('../assets/images/about.png').default}
             alt="barbers"
           />
         </div>
