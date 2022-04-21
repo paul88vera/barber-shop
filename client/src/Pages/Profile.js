@@ -1,12 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Calendly from '../components/Calendly';
-import { useQuery } from '@apollo/client';
-import { QUERY_ME, QUERY_USERS } from '../utils/queries';
-import Auth from '../utils/auth';
+import { useQuery, useMutation } from '@apollo/client';
+import { QUERY_ME } from '../utils/queries';
+import { ADD_HAIRCUT } from '../utils/mutations';
+import auth from '../utils/auth';
 
 const Profile = () => {
-  const { loading, error, data } = useQuery(QUERY_USERS);
-  const loggedIn = Auth.loggedIn();
+  const { loading, error, data } = useQuery(QUERY_ME);
+  // const loggedIn = Auth.loggedIn();
+  const [formState, setFormState] = useState({
+    haircutText: '',
+    instructions: ''
+  })
+  const [addHaircut, { e }] = useMutation(ADD_HAIRCUT)
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+
+    setFormState({
+      ...formState,
+      [name]: value
+    });
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await addHaircut({
+        variables: { ...formState }
+      });
+
+    } catch (e) {
+      console.log(e);
+    }
+
+    setFormState({
+      haircutText: '',
+      instructions: ''
+    })
+
+    window.location.reload();
+  };
 
   if (loading) {
     return ( <div>Loading...</div>)
@@ -14,32 +49,33 @@ const Profile = () => {
     console.log(error);
     return ( <div>Error!</div>)
   } else {
-    const users = data.users;
-    console.log(users);
-    console.log(users[2].haircuts)
-    const haircuts = users[2].haircuts;
+    const user = data.me;
+    console.log(user);
+    console.log(user.haircuts)
+    const haircuts = user.haircuts;
 
     return (
       <div className="profile-wrapper">
         <div className="profile-page">
           <div className="sidebar">
             <div className="profile-pic">
-              {loggedIn && (
+              {/* {loggedIn && ( */}
               <img
                 className="img-fluid"
                 src={require('../assets/images/profile-user.png').default}
                 alt="Jason"
               />
-              )}
+               {/* )} */}
             </div>
-            <div>{users[2].username}</div>
-            <div>{users[2].email}</div>
+            <div>{user.username}</div>
+            <div>{user.email}</div>
           </div>
-          <form className="enter-haircut">
-            <label for="haircut">Enter New Haircut:</label>
-            <input type="text" id="haircut-input" name="haircut-input"></input><br></br>
-            <label for="instructions">Enter special instructions:</label>
-            <input type="text" id="instruction-input" name="instructions-input"></input>
+          <form onSubmit={handleFormSubmit} className="enter-haircut">
+            <label htmlFor="haircutText">Enter New Haircut:</label>
+            <input type="text" id="haircutText" name="haircutText" value={formState.haircutText} onChange={handleChange}></input><br></br>
+            <label htmlFor="instructions">Enter special instructions:</label>
+            <input type="text" id="instructions" name="instructions" value={formState.instructions} onChange={handleChange}></input>
+            <button type="submit" className="save-btn">Save Haircut</button>
           </form>
         </div>
         <div className="profile-body">
