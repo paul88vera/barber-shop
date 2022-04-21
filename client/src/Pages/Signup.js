@@ -63,7 +63,7 @@ const Signup = () => {
             <input className="submit-btn" type="submit" value="Submit!" />
           </div>
         </form>
-        {error && <div>Signup failed</div>}
+        {error && <div>Signup failed! Username or email may already exist.</div>}
     </section>
   );
 }
