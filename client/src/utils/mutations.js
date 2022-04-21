@@ -25,15 +25,12 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_HAIRCUT = gql`
-  mutation addHaircut($haircutText: String!) {
-    addHaircut(haircutText: $haircutText) {
+  mutation addHaircut($haircutText: String!, $instructions: String) {
+    addHaircut(haircutText: $haircutText, instructions: $instructions) {
       _id
       haircutText
-      createdAt
       username
-      instructions {
-        _id
-      }
+      instructions
     }
   }
 `;
