@@ -10,16 +10,16 @@ const Profile = () => {
   // const loggedIn = Auth.loggedIn();
   const [formState, setFormState] = useState({
     haircutText: '',
-    instructions: ''
-  })
-  const [addHaircut, { e }] = useMutation(ADD_HAIRCUT)
+    instructions: '',
+  });
+  const [addHaircut, { e }] = useMutation(ADD_HAIRCUT);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
 
     setFormState({
       ...formState,
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -28,30 +28,29 @@ const Profile = () => {
 
     try {
       const { data } = await addHaircut({
-        variables: { ...formState }
+        variables: { ...formState },
       });
-
     } catch (e) {
       console.log(e);
     }
 
     setFormState({
       haircutText: '',
-      instructions: ''
-    })
+      instructions: '',
+    });
 
     window.location.reload();
   };
 
   if (loading) {
-    return ( <div>Loading...</div>)
+    return <div>Loading...</div>;
   } else if (error) {
     console.log(error);
-    return ( <div>Error!</div>)
+    return <div>Error!</div>;
   } else {
     const user = data.me;
     console.log(user);
-    console.log(user.haircuts)
+    console.log(user.haircuts);
     const haircuts = user.haircuts;
 
     return (
@@ -63,46 +62,68 @@ const Profile = () => {
               <img
                 className="img-fluid"
                 src={require('../assets/images/profile-user.png').default}
-                alt="Jason"
+                alt="User"
               />
-               {/* )} */}
+              {/* )} */}
             </div>
             <div>{user.username}</div>
             <div>{user.email}</div>
           </div>
           <form onSubmit={handleFormSubmit} className="enter-haircut">
             <label htmlFor="haircutText">Enter New Haircut:</label>
-            <input type="text" id="haircutText" name="haircutText" value={formState.haircutText} onChange={handleChange}></input><br></br>
+            <input
+              class="profile-input"
+              type="text"
+              id="haircutText"
+              name="haircutText"
+              value={formState.haircutText}
+              onChange={handleChange}
+            ></input>
+            <br></br>
             <label htmlFor="instructions">Enter special instructions:</label>
-            <input type="text" id="instructions" name="instructions" value={formState.instructions} onChange={handleChange}></input>
-            <button type="submit" className="save-btn">Save Haircut</button>
+            <input
+              class="profile-input-int"
+              type="text"
+              id="instructions"
+              name="instructions"
+              value={formState.instructions}
+              onChange={handleChange}
+            ></input>
+            <button type="submit" className="save-btn">
+              Save Haircut
+            </button>
           </form>
         </div>
         <div className="profile-body">
-          { haircuts ? haircuts.map( haircut => (
-            <div key={haircut._id} className="card">
+          {haircuts ? (
+            haircuts.map((haircut) => (
+              <div key={haircut._id} className="card">
+                <div className="container">
+                  <h4>
+                    <b>Haircut: {haircut.haircutText}</b>
+                  </h4>
+                  <p>Special Instructions: {haircut.instructions}</p>
+                  <button type="button" className="delete-btn">
+                    Delete Haircut
+                  </button>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div className="card">
               <div className="container">
                 <h4>
-                  <b>Haircut: {haircut.haircutText}</b>
+                  <b>No Haircuts Yet</b>
                 </h4>
-                <p>Special Instructions: {haircut.instructions}</p>
-                <button type="button" className="delete-btn">Delete Haircut</button>
+                <p>No Special Instructions</p>
               </div>
             </div>
-          )) 
-          : <div className="card">
-            <div className="container">
-              <h4>
-                <b>No Haircuts Yet</b>
-              </h4>
-              <p>No Special Instructions</p>
-            </div>
-          </div>}
+          )}
         </div>
         <Calendly />
       </div>
     );
   }
-}
+};
 
 export default Profile;
