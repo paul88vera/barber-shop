@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
-    <main>
-      <div>
-        <div className="signup-hero">
+        <section className="signup-hero">
           <div className="hero-text">
             <p className="promo">Sign Up for 50% OFF your first cut!</p>
             <p className="promo-text">
@@ -24,9 +22,7 @@ const Home = () => {
               </button>
             </Link>
           </div>
-        </div>
-      </div>
-    </main>
+        </section>
   );
 }
 

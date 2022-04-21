@@ -5,7 +5,7 @@ const About = () => {
     <section className="about-bckgrd">
       <div className="about container mt-5">
         <div className="about-p row">
-          <div className="col-xs-6">
+          <div className="">
             <h1 className="about-h1">About Us</h1>
             <p>
               I'm baby church-key slow-carb cloud bread kogi, food truck four
@@ -31,7 +31,7 @@ const About = () => {
             <p>Dummy text? More like dummy thicc text, amirite?</p>
           </div>
         </div>
-        <div className="about-img-div col-xs-6">
+        <div className="about-img-div ">
           <img
             className="about-img img-fluid"
             src={require('../assets/images/about.png').default}

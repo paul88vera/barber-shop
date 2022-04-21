@@ -20,7 +20,7 @@ const Contact = () => {
 						</div>
 						<div className="form-group">
 							<label className="form-label">Message</label>
-							<textarea className="textarea" rows="5" />
+							<textarea className="textarea container-sm mx-auto rounded-3" rows="5" />
 						</div>
 						<button type="submit" className="contact-submit-btn">
 							Submit
