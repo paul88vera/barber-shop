@@ -24,13 +24,13 @@ const Profile = () => {
         <div className="profile-page">
           <div className="sidebar">
             <div className="profile-pic">
-              {loggedIn && (
+              {/* {loggedIn && ( */}
               <img
                 className="img-fluid"
                 src={require('../assets/images/profile-user.png').default}
                 alt="Jason"
               />
-              )}
+               {/* )} */}
             </div>
             <div>{users[2].username}</div>
             <div>{users[2].email}</div>
