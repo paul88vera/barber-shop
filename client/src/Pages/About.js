@@ -28,7 +28,6 @@ const About = () => {
               party fixie craft beer occupy vexillologist waistcoat ethical
               poutine.
             </p>
-            <p>Dummy text? More like dummy thicc text, amirite?</p>
           </div>
         </div>
         <div className="about-img-div ">
@@ -41,6 +40,6 @@ const About = () => {
       </div>
     </section>
   );
-}
+};
 
 export default About;
