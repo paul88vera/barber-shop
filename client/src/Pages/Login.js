@@ -57,7 +57,7 @@ const Login = () => {
             <input className="login-btn" type="submit" value="Login" />
           </div>
         </form>
-        {error && <div>Login failed</div>}
+        {error && <div>Invalid credentials.</div>}
       </div>
     </section>
   );
