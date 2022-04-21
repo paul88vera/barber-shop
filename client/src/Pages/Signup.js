@@ -4,7 +4,6 @@ const Signup = () => {
   return (
     <section className="signup-section">
       <h1 className="signup-heading">Sign Up!</h1>
-      <div className="">
         <form action="" method="get" className="signup-form">
           <div>
             <label className="signup-label" for="name">
@@ -28,7 +27,6 @@ const Signup = () => {
             <input className="submit-btn" type="submit" value="Submit!" />
           </div>
         </form>
-      </div>
     </section>
   );
 }

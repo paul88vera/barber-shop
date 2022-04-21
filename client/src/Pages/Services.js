@@ -3,7 +3,7 @@ import React from 'react';
 const Services = () => {
 
     return (
-        <div className="mx-auto w-75 bg-secondary rounded-3 d-flex justify-content-center m-5">
+        <div className="mx-auto w-75 bg-secondary rounded-3 d-flex justify-content-center m-5" id="service-list">
             <div className="bg-white w-50 text-center m-5 p-5 rounded-3">
                 <h2 className="fw-bold border-bottom pb-3">
                     <strong>

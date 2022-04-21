@@ -1,12 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import { Sling as Hamburger } from 'hamburger-react'
+
+
 
 function Header() {
+  // const [isOpen, setOpen] = useState(false) 
   return (
     <section className="header-section">
       <nav className="navbar navbar-expand-md">
         {/* <div className="container"> */}
-          <button
+          {/* <button
             className="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -14,11 +18,11 @@ function Header() {
             // aria-controls="navbarCollapse"
             aria-expanded="false"
             aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarCollapse">
-            <ul className="nav navbar-nav mr-auto">
+          ><Hamburger color="white" onToggle={toggled => ...} />
+
+          </button> */}
+          <div className="nav-div" id="navbarCollapse">
+            <ul className="nav ">
               <Link to="/" className="">
                 <li className="hvr-glow nav-item">Home</li>
               </Link>
@@ -50,9 +54,9 @@ function Header() {
               <Link to="/login">
                 <li className="hvr-glow nav-item">Login</li>
               </Link>
-              <Link to="/profile">
+              {/* <Link to="/profile">
                 <li className="hvr-glow nav-item">Profile</li>
-              </Link>
+              </Link> */}
             </ul>
           </div>
         {/* </div> */}
