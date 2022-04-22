@@ -12,14 +12,14 @@ This website was conceptualized after visiting a barber shop in dallas that had 
 
 ## User Story
 
-The website is a Single-Page Application that allows users to navigate from the Home page to the following:
-A "Gallery" to display photos of work done by the shop in the past.  
-A "Services" page that shows services, pricing, and a description of the service.  
-An "About" page that has a photo of the owners with a blurb about them.  
-A "Contact" page for users to submit an inquiry via a submission form.  
-A page to "Login" and/or "Sign up" so that users are able to login or create a profile.  
+The website is a Single-Page Application that allows users to navigate from the Home page to the following:  
+A "**Gallery**" to display photos of work done by the shop in the past.  
+A "**Services**" page that shows services, pricing, and a description of the service.  
+An "**About**" page that has a photo of the owners with a blurb about them.  
+A "**Contact**" page for users to submit an inquiry via a submission form.  
+A page to "**Login**" and/or "**Sign up**" so that users are able to login or create a profile.  
 
-The "Profile" page requires authentication to validate the user. Once logged in, the user able to add info about themselves and add haircuts with instructions that their barber can reference during their appointment. This allows the barber to know ahead of time who their client is, and look at their profile to see how they normally like their hair cut. The Profile page also allows the user to schedule an appointment.  
+The "**Profile**" page requires authentication to validate the user. Once logged in, the user able to add info about themselves and add haircuts with instructions that their barber can reference during their appointment. This allows the barber to know ahead of time who their client is, and look at their profile to see how they normally like their hair cut. The Profile page also allows the user to schedule an appointment.  
 
 As a USER, I am able to navigate the site with minimal loading time on my browser.  
 Once on the website, I am able to view the barbers' previous work, their service offerings, contact them, schedule an appointment, and save my haircut details to an authenticated profile.  
